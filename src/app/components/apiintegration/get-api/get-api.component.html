@@ -1,0 +1,21 @@
+<app-alert [alertType]="'Success'" [message]="alertMsg"></app-alert>
+
+<div class="alert alert-warning">
+  <strong>Warning!</strong>Welcome to get api page 
+  </div>
+<div class="row">
+    <div class="col-2">
+        <button class="btn btn-success" (click)="getAllUser ()">Get API</button>
+        <button class="btn btn-success" (click)="getAllCustomers ()">Get Customer</button>
+    </div>
+</div>
+
+<div class="col-3">
+    <select class="form-select">
+      @for (item of userList; track $index) {
+        <option> {{item.name}} </option>
+      }
+    </select>
+
+</div>
+<button (click)="changeMsg ()">change Msg</button>
